@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Winter University of Engineering Sciences</title>
+
+<style>
+:root {
+    --primary: #1f3a5f;
+    --secondary: #2563eb;
+    --accent: #0ea5e9;
+    --bg: #f1f5fb;
+    --text: #374151;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(31, 58, 95, 0.95),
+            rgba(37, 99, 235, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #dbeafe;
+}
+
+/* ===== NAV (FIXED ALIGNMENT) ===== */
+nav {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 4px 0;
+}
+
+.nav-container a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: width 0.25s ease;
+}
+
+.nav-container a:hover {
+    color: var(--secondary);
+}
+
+.nav-container a:hover::after {
+    width: 100%;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 22px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h2 {
+    margin: 0 0 6px;
+    font-size: 1.25rem;
+    color: var(--primary);
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #526b8a;
+}
+
+/* ===== HIGHLIGHTS ===== */
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.highlight h3 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.highlight span {
+    font-size: 0.9rem;
+    opacity: 0.95;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 35px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Winter University of Engineering Sciences</h1>
+    <p>Engineering Excellence · Research · Innovation</p>
+</header>
+
+<nav>
+    <div class="nav-container">
+        <a href="#">Home</a>
+        <a href="#">Departments</a>
+        <a href="#">Admissions</a>
+        <a href="#">Research</a>
+        <a href="#">Campus</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585">
+            <div class="card-content">
+                <h2>About the University</h2>
+                <p>Delivering world-class engineering education and impactful research.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <div class="card-content">
+                <h2>Academic Programs</h2>
+                <p>Industry-aligned undergraduate and postgraduate engineering programs.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+            <div class="card-content">
+                <h2>Campus & Student Life</h2>
+                <p>Modern facilities, research centers, and an active academic community.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="highlights">
+        <div class="highlight"><h3>12,000+</h3><span>Students</span></div>
+        <div class="highlight"><h3>450+</h3><span>Faculty</span></div>
+        <div class="highlight"><h3>60+</h3><span>Research Labs</span></div>
+        <div class="highlight"><h3>95%</h3><span>Placement Rate</span></div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Winter University of Engineering Sciences. All Rights Reserved.
+</footer>
+
+</body>
+</html>
